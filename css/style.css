@@ -965,12 +965,19 @@ textarea::placeholder {
     margin-top: 20px;
 }
 
-.icon-check {
-    display: inline-block;
+.icon-check-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
     border: 2px solid #212121;
     margin-right: 7px;
     width: 16px;
-    height: 15px;   
+    height: 15px;
+}
+
+.svg-check {
+    opacity: 0;
 }
 
 .chekbox-text {
@@ -1002,15 +1009,14 @@ textarea::placeholder {
     overflow: hidden;
 }
 
-.checkbox:checked + .icon-check {
+.checkbox:checked + .icon-check-container {
     background-color: var(--main-bg-color);
     border: .2px solid var(--main-bg-color);
-    background-image: url(/images/Vector.svg);
-    background-size: contain;
-    background-origin: border-box;
-    background-position: 37% 37%;
 }
 
+.checkbox:checked + .icon-check-container .svg-check {
+    opacity: 1;
+}
 
 .modal-btn {
     display: flex;
