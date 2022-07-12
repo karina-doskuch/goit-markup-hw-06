@@ -57,7 +57,6 @@ img {
 
 .header-container {
     border-bottom: 1px solid #ECECEC;
-
 }
 
 .main-container {
@@ -73,7 +72,6 @@ img {
 
 .link-logo {
     display: inline-block;
-
     font-family: 'Raleway';
     font-weight: 700;                         
     font-size: 26px;
@@ -81,8 +79,7 @@ img {
     color: var(--color-b);
     letter-spacing: var(--letter-spacing);
     text-decoration: none;
-    margin-right: 93px;
-      
+    margin-right: 93px;    
 }
 
 .logo-accent {
@@ -108,7 +105,7 @@ img {
     content: "";
     width: 100%;
     height: 4px;
-    background: #2196F3;
+    background: var(--main-bg-color);
     border-radius: 2px;
 }
 
@@ -128,7 +125,6 @@ img {
 .site-item:nth-child(3n) {
     margin-right: 0;
 } 
-
 
 .auth-item {
     margin-left: 30px;
@@ -244,7 +240,6 @@ img {
     height: 50px;
     left: 700px;
     top: 430px;
-
 }
 
 .btn-text {
@@ -331,7 +326,6 @@ img {
     border-radius: 4px;
 }
 
-
 .descritpion-block {
     background: #F5F4FA;
     display: flex;
@@ -349,7 +343,7 @@ img {
     line-height: var(--line-height);
     text-transform: uppercase;
     color: var(--color-b);
-    font-size: 14px;
+    font-size: var(--font-s);
 }
 
 .description-text {
@@ -559,7 +553,7 @@ img {
     height: 70px;
     
     font-weight: 700;
-    font-size: 14px;
+    font-size: var(--font-s);
     line-height: 16px;
     text-align: center;
     letter-spacing: 0.03em;
@@ -605,8 +599,7 @@ img {
 .actions-icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;   
 }
 
 .icon-item {
@@ -645,7 +638,6 @@ img {
     fill: currentColor;
 }
 
-
 .team-img {
     margin-bottom: 30px;
 }
@@ -663,7 +655,6 @@ img {
     line-height: 1.18;
     color: var(--color-grey);
     margin-bottom: 16px;
-
 }
 
 /* footer */
@@ -694,7 +685,6 @@ img {
 .footer-list {
     margin-bottom: 9px; 
 }
-
 
 .footer-link {
     display: inline-block;
@@ -778,7 +768,8 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     background: #2F303A;
     border-radius: 4px;
-    color: var(--color-white)
+    padding-left: 16px;
+    color: var(--color-white);
 }
 
 .footer-subscribe-email::placeholder {
@@ -786,7 +777,6 @@ img {
     line-height: 20px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    padding-left: 16px;   
 }
 
 .btn-subscribe {
@@ -880,7 +870,7 @@ img {
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--color-b);
     margin-bottom: 12px;
     margin-top: 40px;
 }
@@ -907,7 +897,7 @@ textarea {
 
 .form-modal-label {
     margin-bottom: 4px;
-    color: #757575;
+    color: var(--color-grey);
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -922,32 +912,41 @@ textarea {
     position: absolute;
     top: 50%;
     left: 0;
-    fill: #212121;
+    fill: var(--color-b);
     margin-left: 12px;
     transform: translateY(-50%);
 } 
 
 .form-modal-field input {
-    width: 448px;
+    width: 100%;
     height: 40px;
     margin: 0;
-    padding: 0;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-} 
-
-.form-modal-input {
-    display: block;
-    margin-bottom: 30px;
-    width: 330px;
-    height: 40px;
-    margin: 0 auto;
     padding-left: 40px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
+} 
+
+.form-modal-input:focus + .svg-modal-form,
+.form-modal-input:hover + .svg-modal-form {
+    fill: var(--main-bg-color);
+}
+
+.form-modal-input:focus,
+.form-modal-input:hover {
+    outline: none;
+    border-color: var(--main-bg-color);
+    cursor: pointer;
 }
 
 .comment {
     padding: 12px 16px;
+}
+
+.comment:hover,
+.comment:focus {
+    cursor: pointer;
+    outline: none;
+    border-color: var(--main-bg-color);
 }
 
 textarea::placeholder {
@@ -957,8 +956,61 @@ textarea::placeholder {
     line-height: 16px;
     letter-spacing: 0 .01em;
     color: rgba(117, 117, 117, 0.5);
-
 }
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon-check {
+    display: inline-block;
+    border: 2px solid #212121;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;   
+}
+
+.chekbox-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--color-grey);
+}
+
+.checkbox-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    margin-left: 5px;
+    color: var(--main-bg-color);
+}
+
+.checkbox {
+    /* appearance: none; */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox:checked + .icon-check {
+    background-color: var(--main-bg-color);
+    border: .2px solid var(--main-bg-color);
+    background-image: url(/images/Vector.svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-position: 37% 37%;
+}
+
 
 .modal-btn {
     display: flex;
